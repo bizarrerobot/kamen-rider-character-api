@@ -64,4 +64,13 @@ public class RiderCharacter {
     public void setRiderType(String riderType) {
         this.riderType = riderType;
     }
+
+       private String imageUrl;
+
+          public String getImageUrl() { 
+            return imageUrl;
+        }
+   public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl; 
+    }
 }

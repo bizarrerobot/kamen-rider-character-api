@@ -29,18 +29,18 @@ public class RiderCharacterService {
     }
 
     public Optional<RiderCharacter> updateCharacter(
-            Long id, RiderCharacter updatedCharacter) {
+        Long id, RiderCharacter updatedCharacter) {
 
-        return repository.findById(id).map(character -> {
-            character.setName(updatedCharacter.getName());
-            character.setDescription(updatedCharacter.getDescription());
-            character.setUniverse(updatedCharacter.getUniverse());
-            character.setRiderType(updatedCharacter.getRiderType());
+    return repository.findById(id).map(character -> {
+        character.setName(updatedCharacter.getName());
+        character.setDescription(updatedCharacter.getDescription());
+        character.setUniverse(updatedCharacter.getUniverse());
+        character.setRiderType(updatedCharacter.getRiderType());
+        character.setImageUrl(updatedCharacter.getImageUrl());
 
-            return repository.save(character);
-        });
-    }
-
+        return repository.save(character);
+    });
+}
     public boolean deleteCharacter(Long id) {
         if (!repository.existsById(id)) {
             return false;
